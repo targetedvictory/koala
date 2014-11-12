@@ -53,7 +53,7 @@ module Koala
           self.fb_error_message = error_info["message"]
 
           error_array = []
-          %w(type code error_subcode message).each do |key|
+          %w(type code error_subcode message error_user_title error_user_msg).each do |key|
             error_array << "#{key}: #{error_info[key]}" if error_info[key]
           end
 
